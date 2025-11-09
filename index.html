@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Task Management Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #161b22; /* dark-bg */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4A5568; /* A neutral gray */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+        /* Smooth transitions for a more polished feel */
+        * {
+            transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        /* Custom date picker icon color for dark mode */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.8);
+        }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-bg': '#0d1117',
+              'dark-component': '#161b22',
+              'dark-border': '#30363d',
+              'primary': '#2f81f7',
+              'secondary': '#58a6ff',
+              'text-light': '#c9d1d9',
+              'text-medium': '#8b949e',
+              'danger': '#f85149',
+              'success': '#238636',
+              'light-bg': '#f6f8fa',
+              'light-component': '#ffffff',
+              'light-border': '#d0d7de',
+              'light-text-primary': '#1f2328',
+              'light-text-secondary': '#656d76',
+            },
+          },
+        },
+      }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-dark-bg text-text-light antialiased">
+    <div id="root"></div>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.3.0"
+      }
+    }
+    </script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
